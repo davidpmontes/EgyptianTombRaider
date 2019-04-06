@@ -21,6 +21,11 @@ public class RunAround : MonoBehaviour, IHeroMover
         this.rb2d = hero.rb2d;
     }
 
+    public void Init(Hero hero, float x)
+    {
+
+    }
+
     public void Move()
     {
         Run();

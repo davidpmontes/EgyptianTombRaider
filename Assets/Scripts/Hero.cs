@@ -101,13 +101,16 @@ public class Hero : MonoBehaviour
             transform.localScale = new Vector3(horizontal_input, 1, 1);
     }
 
-    public void TouchingLadder(int x)
+    public void TouchingLadder(float x)
     {
         if (heroMover.Equals(ladder))
             return;
 
-        if (vertical_input == 1)
+        if (vertical_input != 0)
+        {
             heroMover = ladder;
+            heroMover.Init(this, x);
+        }
     }
 
     public void NotTouchingLadder()
